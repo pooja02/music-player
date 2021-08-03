@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#201E1E"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="32dp">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:id="@+id/artistIv"
+                app:roundedCornerRadius="8dp"
+                app:actualImageResource="@drawable/tonesandi">
+
+            </com.facebook.drawee.view.SimpleDraweeView>
+            <TextView
+                android:id="@+id/artistTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/artistIv"
+                android:textColor="@color/white"
+                android:text="Tones and I"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"></TextView>
+        </RelativeLayout>
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundedCornerRadius="12dp"
+            app:actualImageResource="@drawable/tonesandicover"
+            app:viewAspectRatio="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="12dp">
+
+        </com.facebook.drawee.view.SimpleDraweeView>
+        <TextView
+            android:id="@+id/musicNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:text="Dance Monkey">
+
+        </TextView>
+        <com.google.android.material.slider.Slider
+            android:id="@+id/musicSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:haloColor="@color/white"
+            app:labelBehavior="gone"
+            app:trackColorInactive="#55ffffff"
+            app:trackColorActive="@color/white"
+            app:thumbColor="@color/white"
+            android:valueFrom="0"
+            android:valueTo="233000"
+            android:value="40">
+
+        </com.google.android.material.slider.Slider>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp">
+            <TextView
+                android:id="@+id/positionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#F1EEEE">
+
+            </TextView>
+            <TextView
+                android:id="@+id/durationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F1EEEE"
+                android:layout_gravity="end"
+                android:text="04:25">
+
+            </TextView>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/prevBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_fast_rewind_24"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/playBtn"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/ic_baseline_play_circle_outline_24"
+                android:padding="8dp">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/nextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_fast_forward_24"
+                android:layout_marginStart="24dp">
+
+            </ImageView>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play List"
+            android:textSize="16sp"
+            android:textColor="#F1EEEE"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp">
+
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_main"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
